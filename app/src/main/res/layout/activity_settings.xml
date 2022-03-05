@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary_red"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.ProxiChat.NoActionBar"
+        app:subtitleTextAppearance="@style/FontDMSans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitle="Settings"
+        app:subtitleTextColor="@color/dark_grey"
+        app:title="My Profile"
+        app:titleTextColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:alpha="0.75"
+        android:fontFamily="@font/dm_sans"
+        android:text="What will be your new name be?"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/settings_change_display_name"
+        app:layout_constraintStart_toStartOf="@+id/settings_change_display_name"
+        app:layout_constraintTop_toBottomOf="@+id/settings_change_display_name" />
+
+    <EditText
+        android:id="@+id/settings_name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/dm_sans"
+        android:hint="my new name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/settings_change_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Customize Your Profile"
+        android:fontFamily="@font/dm_sans"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_toolbar" />
+
+    <Button
+        android:id="@+id/settings_save_button"
+        style="@style/Theme.ProxiChat.Button_Text"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/dairy_blue_bg"
+        android:fontFamily="@font/dm_sans"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="@+id/settings_name_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/settings_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/settings_display_pic" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="Tip: Remember, you'll only receive messages when you're within 100 meters and it's been less than 10 minutes since it was sent!"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_save_button" />
+
+    <ImageButton
+        android:id="@+id/settings_display_pic"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:padding="0dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="@+id/settings_save_button"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/settings_save_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:alpha="0.75"
+        android:fontFamily="@font/dm_sans"
+        android:text="How will others see you?"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_name_edit_text" />
+
+    <ImageView
+        android:id="@+id/settings_edit_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginBottom="-20dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/black"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/settings_display_pic"
+        app:layout_constraintStart_toEndOf="@+id/settings_display_pic"
+        app:srcCompat="@drawable/edit_icon_white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
