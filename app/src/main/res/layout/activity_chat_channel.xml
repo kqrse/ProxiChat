@@ -46,6 +46,7 @@
         android:backgroundTint="@color/accent_red"
         android:ems="10"
         android:hint="Drop a message"
+        android:maxLines="5"
         android:fontFamily="@font/dm_sans"
         android:inputType="textPersonName"
         android:minHeight="48dp"
